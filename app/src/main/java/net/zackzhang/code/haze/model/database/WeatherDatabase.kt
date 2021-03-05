@@ -11,7 +11,7 @@ import net.zackzhang.code.haze.model.database.entity.CurrentEntity
 import net.zackzhang.code.haze.model.database.entity.DailyForecastEntity
 import net.zackzhang.code.haze.model.database.entity.HourlyForecastEntity
 
-@Database(entities = [BasicEntity::class, CurrentEntity::class, HourlyForecastEntity::class, DailyForecastEntity::class], version = WeatherDatabase.VERSION)
+@Database(entities = [BasicEntity::class, CurrentEntity::class, HourlyForecastEntity::class, DailyForecastEntity::class], version = WeatherDatabase.VERSION, exportSchema = false)
 abstract class WeatherDatabase : RoomDatabase() {
 
     companion object {

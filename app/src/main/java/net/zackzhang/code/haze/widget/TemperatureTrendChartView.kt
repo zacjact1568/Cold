@@ -195,9 +195,9 @@ class TemperatureTrendChartView : View {
     // 计算温度点的坐标
     private fun calculatePointCoordinates() {
         //最高温度
-        val maxTemp = mTemperatureMaxArray.max()!!
+        val maxTemp = mTemperatureMaxArray.maxOrNull()!!
         //最低温度
-        val minTemp = mTemperatureMinArray.min()!!
+        val minTemp = mTemperatureMinArray.minOrNull()!!
         val lastLineBottom = mConditionBaseline + mTextPaint.descent()
         val startY = lastLineBottom + SPACING_CONDITION_TEMP
         //行数量
